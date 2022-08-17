@@ -1,8 +1,10 @@
 const { readFile, writeFile, write } = require('fs')
 const path=require('path');
 
+//async file reading and writing
+// readfile with the check error happened or not
 
-// readfile with the check error correction and 
+console.log('start');
 readFile(path.resolve(__dirname,'content','first.txt'),'utf8',(err,result)=>{
     if(err){
         console.log(err);
@@ -15,6 +17,7 @@ readFile(path.resolve(__dirname,'content','first.txt'),'utf8',(err,result)=>{
             return;
         }
         const second=result;
+        //writefile with the check error happened or not
         writeFile(path.resolve(__dirname,'content','result-async.txt'),`Here is the result : ${first}, ${second}`,(err,result)=>{
             if(err){
                 console.log(err);
@@ -26,3 +29,5 @@ readFile(path.resolve(__dirname,'content','first.txt'),'utf8',(err,result)=>{
     console.log(result);
 
 })
+
+console.log('end');

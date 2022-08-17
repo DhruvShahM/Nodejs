@@ -1,6 +1,7 @@
 const { readFileSync, writeFileSync } = require('fs')
 const path=require('path');
 
+//synchronously reading and writing the file 
 // Reading two files
 const first = readFileSync(path.resolve(__dirname,'content','first.txt'),'utf8')
 const second = readFileSync(path.resolve(__dirname,'content','second.txt'),'utf8')
